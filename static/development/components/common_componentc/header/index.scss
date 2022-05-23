@@ -1,0 +1,145 @@
+.header {
+    @media (max-width: 1200px) {
+        height: 55px;
+        padding: 0;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1);
+
+    &_left {
+        display: flex;
+        align-items: center;
+
+        &__logo {
+            @media (max-width: 1200px) {
+                img {
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    &_links {
+        @media (max-width: 1200px) {
+            display: none;
+        }
+
+        a {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #000000;
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &_btn {
+        display: flex;
+
+        @media (max-width: 1200px) {
+
+            .btn_white,
+            .btn_red {
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .btn_white,
+            .btn_red {
+                width: 55px;
+                height: 55px;
+
+                span {
+                    display: none;
+                }
+
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &_hamburger {
+        @media (max-width: 1200px) {
+            display: flex;
+        }
+
+        overflow: hidden;
+        position: relative;
+        width: 55px;
+        height: 55px;
+        background: #030E1E;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        display: none;
+    }
+
+    &_line {
+        transition: all .2s;
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        border-radius: 18px;
+        margin: 4px 0;
+        cursor: pointer;
+        background: #FFFFFF;
+
+        &_1 {
+            top: 16px;
+            left: 14px;
+        }
+
+        &_2 {
+            top: 22px;
+            left: 14px;
+        }
+
+        &_3 {
+            top: 28px;
+            left: 14px;
+        }
+    }
+
+    &.active {
+        .header_line {
+            &_1 {
+                top: 22px;
+                left: 14px;
+                transform: rotate(45deg);
+            }
+
+            &_2 {
+                left: -100px;
+            }
+
+            &_3 {
+                top: 22px;
+                left: 14px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .header_mob_nav {
+            display: block;
+        }
+    }
+}

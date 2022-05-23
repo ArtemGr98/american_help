@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
