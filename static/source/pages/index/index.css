@@ -1988,6 +1988,13 @@ button.swiper-pagination-bullet {
       width: 70px;
       height: 70px; } }
 
+@media (max-width: 600px) {
+  .banner .social {
+    top: 5%; }
+    .banner .social img {
+      width: 60px;
+      height: 60px; } }
+
 .banner_bottom {
   display: flex; }
   @media (max-width: 900px) {
